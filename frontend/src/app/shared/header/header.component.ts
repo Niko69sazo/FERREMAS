@@ -3,10 +3,16 @@ import { CarritoService } from '../../services/carrito.service';
 import { ItemCarrito } from '../../carrito.interface';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    HttpClientModule
+  ],
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']

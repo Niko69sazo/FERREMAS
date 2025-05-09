@@ -3,11 +3,10 @@
 
   <nav class="nav-links">
     <a routerLink="/" *ngIf="!isLoggedIn()">Inicio</a>
-    <a routerLink="/login" *ngIf="!isLoggedIn()">Iniciar sesión</a>
-    <a routerLink="/register" *ngIf="!isLoggedIn()">Registrarse</a>
+    <a [routerLink]="['/login']"*ngIf="!isLoggedIn()">Iniciar sesión</a>
+    <a [routerLink]="['/register']" *ngIf="!isLoggedIn()">Registrarse</a>
     <a (click)="logout()" *ngIf="isLoggedIn()">Cerrar sesión</a>
   </nav>
-  
 
   <div class="carrito-container" (mouseenter)="mostrarResumenCarritoHandler()" (mouseleave)="ocultarResumenCarritoHandler()">
     <a routerLink="/carrito" class="carrito-icono">
